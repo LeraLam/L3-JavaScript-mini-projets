@@ -1,0 +1,110 @@
+extends layout
+
+block content
+  h1= title
+  p
+  strong # Projet : Pong
+  div
+    br
+    div
+      | Ce rendu &agrave; &eacute;t&eacute; r&eacute;alis&eacute; par Paul Lerat-Lambert et correspond au projet n&deg;2 de l&apos;option JavaScript.
+    div
+      | Le sujet est disponible ici : https://www.fil.univ-lille1.fr/~routier/enseignement/licence/js/tdtp/pong.html
+    br
+    div
+      strong # Auteur
+    br
+    div    Auteur : Paul Lerat-Lambert  
+    div    Groupe : 2
+    div    Version : 5.0 - Final 
+    br
+    div
+      strong # Description Projet
+    br
+    div
+      | L&apos;objectif est de r&eacute;aliser une version simplifi&eacute;e de l&apos;historique jeu &quot;Pong&quot;, mais dans une version &quot;r&eacute;seau&quot; puisque les joueurs pourront se trouver sur deux ordinateurs diff&eacute;rents. Ce travail sera l&apos;occasion :
+    br
+    div    de r&eacute;utiliser les classes mises en &oelig;uvre dans le TP pr&eacute;c&eacute;dent ;
+    div    de manipuler une premi&egrave;re fois Node et Express ;
+    div
+      |  de d&eacute;couvrir socket.io pour g&eacute;rer des communications bi-directionnelles entre le client et le serveur.
+    br
+    div
+      strong ## Cahier des charges
+    br
+    div     - Utilisation de node
+    div     - Utilisation de Express
+    div     - Utilisation de Socket.io
+    div     - Jouable en r&eacute;seaux &agrave; deux joueurs
+    div     - Vous devez cr&eacute;er un serveur qui proposera plusieurs routes :
+    br
+    div
+      |               / qui livre une page d&apos;accueil qui pr&eacute;sente le jeu et fournit des liens vers les autres routes
+    div
+      |               /rules qui permet d&apos;acc&eacute;der &agrave; une page o&ugrave; sont pr&eacute;sent&eacute;es les  r&egrave;gles du jeu et est d&eacute;crit la
+    div               /about qui informe sur le num&eacute;ro de version et les auteurs du jeu
+    div               /play qui permet d&apos;acc&eacute;der au jeu  
+    br
+    div    - Mis &agrave; part la page /play, les autres pages seront statiques.
+    div    - Pour la page /play, le comportement sera le suivant :
+    div
+      |    - Seules les deux premi&egrave;res connexions sont accept&eacute;es, les suivantes sont rejet&eacute;es et une page affichant un message de refus de connexion est envoy&eacute;e
+    div      Le premier &agrave; se connecter devient &quot;premier joueur&quot;.  
+    div
+      |    - Les deux premiers joueurs voit appara&icirc;tre un terrain de jeu avec les deux raquettes sur la gauche et la droite.
+    div
+      |    - Chaque joueur contr&ocirc;le la raquette situ&eacute;e sur la gauche de son &eacute;cran &agrave; l&apos;aide des touches fl&egrave;che haut et fl&egrave;che bas.
+    div
+      |    - La raquette de droite est celle de l&apos;autre joueur, tout d&eacute;placement de l&apos;adversaire est imm&eacute;diatement visible.
+    div
+      |    - Le premier joueur peut d&eacute;marrer les &eacute;changes en &quot;lan&ccedil;ant la balle&quot; par appui sur la barre espace.
+    div
+      |    - Les joueurs doivent intercepter la balle en d&eacute;pla&ccedil;ant leur raquette, lorsque la balle touche une raquette elle est renvoy&eacute;e vers l&apos;autre joueur avec un angle adapt&eacute;.
+    div
+      |    - Si un joueur ne parvient pas &agrave; intercepter la balle, celle-ci s&apos;arr&ecirc;te sur les limites de terrain derri&egrave;re lui, l&apos;autre joueur a alors marqu&eacute; un but, le premier joueur peut relancer une nouvelle balle pour poursuivre la partie.
+    div
+      |    - Si l&apos;un des joueurs se d&eacute;connecte, le second joueur en est averti par un message et est &agrave; son tour d&eacute;connect&eacute;.
+    br
+    div
+      strong # Installation et utilisation du projet
+    br
+    div
+      | Pour pouvoir lancer le jeu, il faudra r&eacute;aliser toutes les &eacute;tapes suivantes dans l&apos;ordre.
+    br
+    br
+    div
+      strong ## R&eacute;cup&eacute;ration avec GIT
+    br
+    div
+      | Se placer &agrave; l&apos;emplacement souhait&eacute; pour la cr&eacute;ation du dossier et executer la commande :
+    br
+    div
+      | $  git clone git@gitlab-etu.fil.univ-lille1.fr:leratlambert/pong_lerat_lambert.git
+    div
+      | $  git clone https://gitlab-etu.fil.univ-lille1.fr/leratlambert/pong_lerat_lambert.git
+    br
+    div
+      | Selon si vous souhaitez r&eacute;aliser le clonage en utilisant la methode SSH ou HTTP.
+    br
+    br
+    div
+      strong ## T&eacute;lechargement des packages
+    br
+    div     $ make install
+    br
+    div
+      strong ## Lancer le serveur
+    br
+    div     $ make start
+    br
+    div
+      strong ## Se connecter au serveur
+    br
+    div     Dans un navigateur internet se connecter &agrave; la page : http://127.0.0.1:3000/
+    br
+    div
+      strong ## Nettoyage du r&eacute;pertoire
+    br
+    div     $ make clean
+
+

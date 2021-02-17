@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+
+  p#subtitle
+    Strong Règles :
+  p
+    | Pong est une simulation simpliste de tennis de table ou ping-pong, repris pour le nom du jeu. Une balle, repr&eacute;sent&eacute;e par une image de bille rouge, se d&eacute;place &agrave; travers l&apos;&eacute;cran et rebondit sur les rebords du haut et du bas. Les deux joueurs commandent chacun une raquette, repr&eacute;sent&eacute;e par un trait vertical aux extr&eacute;mit&eacute;s gauche et droite du terrain de jeu. Dans la version originale, l&apos;interface est dot&eacute;e d&apos;une ligne centrale en pointill&eacute;s, s&eacute;parant l&apos;&eacute;cran en deux et repr&eacute;sentant le filet vu du dessus. Les bords de l&apos;&eacute;cran mat&eacute;rialisent les limites du terrain, la balle ne pouvant pas sortir par le haut ou le bas. 
+  p
+    | Le joueur d&eacute;place cette raquette en la faisant glisser verticalement entre les extr&eacute;mit&eacute;s de l&apos;&eacute;cran &agrave; l&apos;aide des contr&ocirc;les. Si la balle frappe la raquette, elle rebondit vers l&apos;autre joueur. Si elle manque la raquette, l&apos;autre joueur marque un point. . L&apos;angle de rebond de la balle change en fonction de l&apos;impact avec la raquette : au centre de la raquette, la balle sera renvoy&eacute;e &agrave; 180&deg; par rapport &agrave; son impact, alors que l&apos;angle est plus aigu si la balle rebondit sur le bord de la raquette. Par ailleurs, celle-ci ne peut aller jusqu&apos;au haut de l&apos;&eacute;cran, afin d&apos;&eacute;viter des parties infinies, et obliger un des joueurs &agrave; perdre si la balle y arrive.
+  p 
+    | (cf : Wikipédia)
+
+  p#subtitle
+    Strong Contrôles : 
+  p 
+    |  - Z ou Flêche du haut : Déplacer sa raquette vers le haut
+  p 
+    |  - S ou Flêche du bas : Déplacer sa raquette vers le bas 
+  p 
+    |  - Esapce : Lorsqu'on est joueur 1 permet de lancer une nouvelle balle, seulement si aucune balle n'est en jeu.
+

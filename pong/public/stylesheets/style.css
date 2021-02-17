@@ -1,0 +1,42 @@
+body {
+  background-color: gray;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+html {
+  background-color : rgba(0,0,0,0.5);
+}
+
+canvas#field {
+    display : block;
+    margin : auto;
+    background-color: #1e2d47;
+    border : 10px solid black;
+}
+
+h1 {
+  background-color: #1e2d47;
+  border: 10px solid black;
+  text-align: center;
+  font-size : 50px; 
+  color : White;
+}
+
+p#player{
+  background-color: #1e2d47;
+  border: 10px solid black;
+  text-align: center;
+  font-size : 50px; 
+  color : White;
+}
+
+p#subtitle{
+  font-size : 30px; 
+  color : Black;
+}
+
+p {
+  font-size : 20px; 
+  color : Black;
+}

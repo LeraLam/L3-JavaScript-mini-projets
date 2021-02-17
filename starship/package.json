@@ -1,0 +1,26 @@
+{
+  "name": "StarShip",
+  "version": "1.0.0",
+  "description": "test webpack pour l'exercice sur les ball",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "hotloader": "webpack-dev-server --open",
+    "start": "electron .",
+    "build-exe": "electron-packager . --platform=linux,win32 --arch=x64 --out=bin --overwrite --icon=./src/images/vaisseau-ballon-petit.png"
+  },
+  "author": "Paul Lerat-Lambert",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "electron": "^7.1.9",
+    "electron-packager": "^14.2.0",
+    "file-loader": "^5.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
